@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dvewtmm6d837k"]
+
+[ext_resource type="Script" uid="uid://xfij57yjcc1f" path="res://scripts/hud.gd" id="1_37p78"]
+
+[node name="HUD" type="CanvasLayer" unique_id=699566821]
+script = ExtResource("1_37p78")
+
+[node name="ItemSlot" type="TextureRect" parent="." unique_id=2035413943]
+offset_right = 40.0
+offset_bottom = 40.0

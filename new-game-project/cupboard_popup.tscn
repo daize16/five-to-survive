@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cn3o73rqr1fmj"]
+
+[ext_resource type="Script" uid="uid://dcbwidhrdur7j" path="res://scripts/cupboard_popup.gd" id="1_gsvj5"]
+
+[node name="CupboardPopup" type="CanvasLayer" unique_id=647663135]
+script = ExtResource("1_gsvj5")
+
+[node name="Stage" type="Control" parent="." unique_id=1648011951]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NameLabel" type="Label" parent="." unique_id=1832208407]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Hint" type="Label" parent="." unique_id=1553884533]
+offset_right = 40.0
+offset_bottom = 23.0
