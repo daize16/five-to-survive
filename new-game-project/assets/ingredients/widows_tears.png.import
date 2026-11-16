@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btctxhlm801ea"
-path="res://.godot/imported/tears_of_a_widow.png-00038bacb70d39ed2dcbc227bcc3bdbf.ctex"
+uid="uid://l42b2xymc15l"
+path="res://.godot/imported/widows_tears.png-864640d125aef39a0271fc50f1efea2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ingredients/tears_of_a_widow.png"
-dest_files=["res://.godot/imported/tears_of_a_widow.png-00038bacb70d39ed2dcbc227bcc3bdbf.ctex"]
+source_file="res://assets/ingredients/widows_tears.png"
+dest_files=["res://.godot/imported/widows_tears.png-864640d125aef39a0271fc50f1efea2c.ctex"]
 
 [params]
 

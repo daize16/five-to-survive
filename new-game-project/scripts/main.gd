@@ -11,7 +11,7 @@ const LAYOUT := [
 ]
 
 @onready var popup = $CupboardPopup
-@onready var cupboards_root: Node2D = $Cupboards
+@onready var cupboards_root: Node2D = $Cupboard
 
 func _ready() -> void:
 	for entry in LAYOUT:
