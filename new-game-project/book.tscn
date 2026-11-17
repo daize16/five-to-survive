@@ -1,0 +1,180 @@
+[gd_scene format=3 uid="uid://c8qh4ne2048hx"]
+
+[ext_resource type="Script" uid="uid://6ap1imm8b53x" path="res://scripts/book.gd" id="1_book"]
+[ext_resource type="Script" uid="uid://bmb2516vwu0h6" path="res://scripts/book_page.gd" id="2_page_art"]
+
+[node name="Book" type="CanvasLayer" unique_id=183388082]
+layer = 2
+script = ExtResource("1_book")
+
+[node name="Overlay" type="Control" parent="." unique_id=919875176]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DimBackground" type="ColorRect" parent="Overlay" unique_id=634497466]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.055, 0.067, 0.063, 0.82)
+
+[node name="BookSpread" type="Control" parent="Overlay" unique_id=239026556]
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 16.0
+offset_right = 452.0
+offset_bottom = 254.0
+
+[node name="BookCover" type="PanelContainer" parent="Overlay/BookSpread" unique_id=557722499]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftPage" type="PanelContainer" parent="Overlay/BookSpread" unique_id=466506403]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 210.0
+offset_bottom = 230.0
+script = ExtResource("2_page_art")
+
+[node name="LeftMargin" type="MarginContainer" parent="Overlay/BookSpread/LeftPage" unique_id=591519590]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
+
+[node name="LeftLayout" type="VBoxContainer" parent="Overlay/BookSpread/LeftPage/LeftMargin" unique_id=1721350537]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="LeftHeader" type="Label" parent="Overlay/BookSpread/LeftPage/LeftMargin/LeftLayout" unique_id=495175717]
+custom_minimum_size = Vector2(0, 21)
+layout_mode = 2
+text = "Book of Ilnesses and Common Ailments"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IndexColumnLeft" type="VBoxContainer" parent="Overlay/BookSpread/LeftPage/LeftMargin/LeftLayout" unique_id=533469713]
+custom_minimum_size = Vector2(0, 132)
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="SymptomsText" type="Label" parent="Overlay/BookSpread/LeftPage/LeftMargin/LeftLayout" unique_id=813717476]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Symptoms appear here."
+autowrap_mode = 3
+
+[node name="LeftSpacer" type="Control" parent="Overlay/BookSpread/LeftPage/LeftMargin/LeftLayout" unique_id=49758440]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LeftPageNumber" type="Label" parent="Overlay/BookSpread/LeftPage/LeftMargin/LeftLayout" unique_id=1455853823]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+text = "— 01 —"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Spine" type="ColorRect" parent="Overlay/BookSpread" unique_id=1334234257]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 8.0
+offset_right = 214.0
+offset_bottom = 230.0
+mouse_filter = 2
+
+[node name="RightPage" type="PanelContainer" parent="Overlay/BookSpread" unique_id=1717246965]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 8.0
+offset_right = 414.0
+offset_bottom = 230.0
+script = ExtResource("2_page_art")
+page_side = 1
+
+[node name="RightMargin" type="MarginContainer" parent="Overlay/BookSpread/RightPage" unique_id=33870884]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
+
+[node name="RightLayout" type="VBoxContainer" parent="Overlay/BookSpread/RightPage/RightMargin" unique_id=1167589609]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="RightHeader" type="HBoxContainer" parent="Overlay/BookSpread/RightPage/RightMargin/RightLayout" unique_id=196644944]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="AilmentTitle" type="Label" parent="Overlay/BookSpread/RightPage/RightMargin/RightLayout/RightHeader" unique_id=1781525171]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "INDEX • CONTINUED"
+vertical_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Overlay/BookSpread/RightPage/RightMargin/RightLayout/RightHeader" unique_id=68413464]
+custom_minimum_size = Vector2(46, 23)
+layout_mode = 2
+text = "CLOSE"
+
+[node name="IndexColumnRight" type="VBoxContainer" parent="Overlay/BookSpread/RightPage/RightMargin/RightLayout" unique_id=920331527]
+custom_minimum_size = Vector2(0, 132)
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="CureHeading" type="Label" parent="Overlay/BookSpread/RightPage/RightMargin/RightLayout" unique_id=213827722]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+text = "CURE INGREDIENTS"
+
+[node name="CureText" type="Label" parent="Overlay/BookSpread/RightPage/RightMargin/RightLayout" unique_id=243846118]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Cure ingredients appear here."
+autowrap_mode = 3
+
+[node name="RightSpacer" type="Control" parent="Overlay/BookSpread/RightPage/RightMargin/RightLayout" unique_id=1940132134]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RightPageNumber" type="Label" parent="Overlay/BookSpread/RightPage/RightMargin/RightLayout" unique_id=657397138]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+text = "— 02 —"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="PreviousButton" type="Button" parent="Overlay/BookSpread" unique_id=1295361572]
+layout_mode = 0
+offset_left = -26.0
+offset_top = 96.0
+offset_right = 14.0
+offset_bottom = 142.0
+focus_mode = 0
+text = "◀"
+
+[node name="NextButton" type="Button" parent="Overlay/BookSpread" unique_id=2115504416]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 96.0
+offset_right = 450.0
+offset_bottom = 142.0
+focus_mode = 0
+text = "▶"
