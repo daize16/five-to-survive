@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="6_dg77c"]
 [ext_resource type="PackedScene" uid="uid://y8nt7o43sy40" path="res://cupboard.tscn" id="7_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://cn3o73rqr1fmj" path="res://cupboard_popup.tscn" id="8_5vw27"]
-[ext_resource type="PackedScene" path="res://book.tscn" id="9_book"]
+[ext_resource type="PackedScene" uid="uid://c8qh4ne2048hx" path="res://book.tscn" id="9_book"]
 [ext_resource type="PackedScene" path="res://book_lectern.tscn" id="10_lectern"]
 [ext_resource type="Texture2D" uid="uid://c7u148eo4mef1" path="res://assets/cauldron.png" id="11_cauldron"]
 
@@ -100,7 +100,8 @@ position = Vector2(240, 120)
 
 [node name="Cauldron" type="Sprite2D" parent="Actors" unique_id=2146536871]
 texture_filter = 1
-position = Vector2(476, 64)
+position = Vector2(350, 100)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("11_cauldron")
 centered = false
 offset = Vector2(-50, -61)
