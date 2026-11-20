@@ -10,7 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cn3o73rqr1fmj" path="res://cupboard_popup.tscn" id="8_5vw27"]
 [ext_resource type="PackedScene" uid="uid://c8qh4ne2048hx" path="res://book.tscn" id="9_book"]
 [ext_resource type="PackedScene" path="res://book_lectern.tscn" id="10_lectern"]
-[ext_resource type="Texture2D" path="res://assets/cauldron_refined.png" id="11_cauldron"]
+[ext_resource type="Texture2D" uid="uid://dflh3630rhvyv" path="res://assets/cauldron_refined.png" id="11_cauldron"]
+[ext_resource type="Script" uid="uid://divm8452tggru" path="res://scripts/symptom_effects.gd" id="12_symptom_effects"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w48qg"]
 texture = ExtResource("2_5vw27")
@@ -111,3 +112,6 @@ offset = Vector2(-57, -78)
 [node name="CupboardPopup" parent="." unique_id=647663135 instance=ExtResource("8_5vw27")]
 
 [node name="Book" parent="." unique_id=529358681 instance=ExtResource("9_book")]
+
+[node name="SymptomEffects" type="Node" parent="." unique_id=1668557637]
+script = ExtResource("12_symptom_effects")
