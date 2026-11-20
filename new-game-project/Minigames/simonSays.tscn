@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://dh62w7sg7ihv8"]
+
+[ext_resource type="Script" uid="uid://dn3idgvh67w5" path="res://Minigames/simon_says.gd" id="1_u2lx4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2lx4"]
+bg_color = Color(0, 0.85490197, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_esoi6"]
+bg_color = Color(0, 0.8235294, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mlvku"]
+bg_color = Color(0, 0.85490197, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlqnw"]
+bg_color = Color(0.14509805, 0.7529412, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cwjit"]
+bg_color = Color(0.14509805, 0.7529412, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gtvgo"]
+bg_color = Color(0.14509805, 0.6666667, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_owuc0"]
+bg_color = Color(0.94339466, 0.9433941, 7.70092e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dn4wy"]
+bg_color = Color(0.94509804, 0.94509804, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ne2k0"]
+bg_color = Color(0.83600616, 0.83600646, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8elal"]
+bg_color = Color(1, 0.24250314, 0.21164179, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wca2"]
+bg_color = Color(1, 0.24313726, 0.21176471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2lgw"]
+bg_color = Color(0.92301977, 0, 0.069277935, 1)
+
+[node name="Control" type="Control" unique_id=1873804474]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 481.0
+offset_bottom = 271.0
+script = ExtResource("1_u2lx4")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=644613671]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.5
+offset_top = -47.0
+offset_right = 50.5
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="Button1" type="Button" parent="GridContainer" unique_id=1480448888]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_u2lx4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_esoi6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mlvku")
+
+[node name="Button2" type="Button" parent="GridContainer" unique_id=189018262]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_rlqnw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cwjit")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gtvgo")
+
+[node name="Button3" type="Button" parent="GridContainer" unique_id=1261206864]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_owuc0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dn4wy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ne2k0")
+
+[node name="Button4" type="Button" parent="GridContainer" unique_id=1402826600]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_8elal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4wca2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j2lgw")
+
+[node name="Label" type="Label" parent="." unique_id=1145005981]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label2" type="Label" parent="." unique_id=1820085477]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 1.0
+offset_right = 240.0
+offset_bottom = 24.0
+
+[node name="Label3" type="Label" parent="." unique_id=1134122677]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 171.0
+offset_right = 135.0
+offset_bottom = 194.0
+
+[connection signal="pressed" from="GridContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="GridContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="GridContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="GridContainer/Button4" to="." method="_on_button_4_pressed"]
