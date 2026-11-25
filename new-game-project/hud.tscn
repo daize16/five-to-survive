@@ -3,8 +3,28 @@
 [ext_resource type="Script" uid="uid://xfij57yjcc1f" path="res://scripts/hud.gd" id="1_37p78"]
 
 [node name="HUD" type="CanvasLayer" unique_id=699566821]
+process_mode = 3
 script = ExtResource("1_37p78")
 
 [node name="ItemSlot" type="TextureRect" parent="." unique_id=2035413943]
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="CountdownLabel" type="Label" parent="." unique_id=2021773933]
+anchors_preset = -1
+anchor_left = 0.915
+anchor_right = 0.915
+offset_left = -0.2000122
+offset_right = 39.799988
+offset_bottom = 23.0
+text = "5:00"
+
+[node name="BrewLabel" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -28.0
+offset_right = 350.0
+offset_bottom = -6.0
+grow_vertical = 0

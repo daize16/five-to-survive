@@ -55,7 +55,13 @@ texture = ExtResource("4_4c57u")
 [sub_resource type="TileSet" id="TileSet_mnypq"]
 sources/0 = SubResource("TileSetAtlasSource_2cqfq")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_cauldron"]
+radius = 28.0
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5vw27"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_furniture_blocker"]
+size = Vector2(24, 12)
 
 [node name="Main" type="Node2D" unique_id=1600516240]
 script = ExtResource("1_272bh")
@@ -78,6 +84,20 @@ y_sort_enabled = true
 [node name="Player" parent="Actors" unique_id=421666099 instance=ExtResource("6_dg77c")]
 position = Vector2(114, 67)
 
+[node name="Cauldron" type="Sprite2D" parent="Actors" unique_id=2146536871]
+texture_filter = 1
+position = Vector2(350, 100)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_cauldron")
+centered = false
+offset = Vector2(-57, -78)
+
+[node name="CauldronArea" type="Area2D" parent="Actors" unique_id=190412364]
+position = Vector2(346, 83)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actors/CauldronArea" unique_id=486856652]
+shape = SubResource("CircleShape2D_cauldron")
+
 [node name="Cupboard" parent="Actors" unique_id=667304056 instance=ExtResource("7_ycdy4")]
 position = Vector2(64, 44)
 physics_material_override = SubResource("PhysicsMaterial_5vw27")
@@ -99,13 +119,17 @@ cupboard_id = "cupboard_4"
 [node name="BookLectern" parent="Actors" unique_id=623972100 instance=ExtResource("10_lectern")]
 position = Vector2(240, 120)
 
-[node name="Cauldron" type="Sprite2D" parent="Actors" unique_id=2146536871]
-texture_filter = 1
-position = Vector2(350, 100)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("11_cauldron")
-centered = false
-offset = Vector2(-57, -78)
+[node name="CauldronBlocker" type="StaticBody2D" parent="Actors" unique_id=672080786]
+position = Vector2(346, 86)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actors/CauldronBlocker" unique_id=139750553]
+shape = SubResource("RectangleShape2D_furniture_blocker")
+
+[node name="LecternBlocker" type="StaticBody2D" parent="Actors" unique_id=1585765084]
+position = Vector2(240, 106)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actors/LecternBlocker" unique_id=673553090]
+shape = SubResource("RectangleShape2D_furniture_blocker")
 
 [node name="HUD" parent="." unique_id=699566821 instance=ExtResource("5_efxa6")]
 
@@ -115,3 +139,42 @@ offset = Vector2(-57, -78)
 
 [node name="SymptomEffects" type="Node" parent="." unique_id=1668557637]
 script = ExtResource("12_symptom_effects")
+
+[node name="RunTimer" type="Timer" parent="." unique_id=37649228]
+process_mode = 3
+wait_time = 300.0
+one_shot = true
+
+[node name="ResultUI" type="CanvasLayer" parent="." unique_id=2059464790]
+process_mode = 3
+layer = 10
+
+[node name="ResultPanel" type="Panel" parent="ResultUI" unique_id=261133445]
+visible = false
+anchors_preset = -1
+anchor_left = 0.45800003
+anchor_top = 0.44400004
+anchor_right = 0.45800003
+anchor_bottom = 0.44400004
+offset_left = -109.84001
+offset_top = -36.880013
+offset_right = 150.15999
+offset_bottom = 67.11999
+
+[node name="RestartButton" type="Button" parent="ResultUI/ResultPanel" unique_id=1501168581]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 57.0
+offset_right = 180.0
+offset_bottom = 85.0
+text = "Restart"
+
+[node name="ResultLabel" type="Label" parent="ResultUI/ResultPanel" unique_id=1283782102]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 18.0
+offset_right = 60.0
+offset_bottom = 41.0
+
+[connection signal="timeout" from="RunTimer" to="." method="_on_run_timer_timeout"]
+[connection signal="pressed" from="ResultUI/ResultPanel/RestartButton" to="." method="_on_restart_button_pressed"]
