@@ -44,3 +44,9 @@ func take_item(cupboard_id: String, item_id: String) -> bool:
 	held_item = item_id
 	held_changed.emit(item_id)
 	return true
+
+func use_held_item() -> String:
+	var item = held_item
+	held_item = ""
+	held_changed.emit("")
+	return item
