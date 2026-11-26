@@ -1,6 +1,6 @@
 extends Node2D
 
-
+@export var test_illness_name := ""
 
 @onready var popup = $CupboardPopup
 @onready var book = $Book
@@ -19,6 +19,12 @@ func _ready() -> void:
 
 func start_game() -> void:
 	current_illness = book.sorted_ailments.pick_random()
+	if test_illness_name != "":
+		for illness in book.sorted_ailments:
+			if illness["name"] == test_illness_name:
+				current_illness = illness
+				break
+
 	print("Illness: ", current_illness["name"])
 	GameState.new_run(cupboard_ids, current_illness["cure"])
 	start_symptoms(current_illness["symptoms"])
@@ -28,7 +34,8 @@ func start_game() -> void:
 
 func start_symptoms(symptoms: Array) -> void:
 	symptom_effects.shakiness_enabled = symptoms.has("Shakiness")
-	# Add the other symptom checks here when their effects are ready.
+	$HUD/NauseaTint.visible = symptoms.has("Nausea")
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("restart"):
@@ -55,7 +62,7 @@ func finish_run(won: bool) -> void:
 
 	$RunTimer.stop()
 	start_symptoms([])
-	position = symptom_effects.original_position
+	symptom_effects.offset = Vector2.ZERO
 
 	var result_label = $ResultUI/ResultPanel/ResultLabel
 

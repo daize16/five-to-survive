@@ -6,6 +6,16 @@
 process_mode = 3
 script = ExtResource("1_37p78")
 
+[node name="NauseaTint" type="ColorRect" parent="." unique_id=1098577811]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.04, 0.72, 0.12, 0.0)
+
 [node name="ItemSlot" type="TextureRect" parent="." unique_id=2035413943]
 offset_right = 40.0
 offset_bottom = 40.0
@@ -19,7 +29,7 @@ offset_right = 39.799988
 offset_bottom = 23.0
 text = "5:00"
 
-[node name="BrewLabel" type="Label" parent="."]
+[node name="BrewLabel" type="Label" parent="." unique_id=1523769075]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
