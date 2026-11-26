@@ -24,6 +24,8 @@ IngredientDB="*uid://b6r1lqe0xcla5"
 
 window/size/viewport_width=480
 window/size/viewport_height=270
+window/size/window_width_override=964
+window/size/window_height_override=544
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
