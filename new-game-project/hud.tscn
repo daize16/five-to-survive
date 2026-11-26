@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dvewtmm6d837k"]
 
 [ext_resource type="Script" uid="uid://xfij57yjcc1f" path="res://scripts/hud.gd" id="1_37p78"]
+[ext_resource type="Script" uid="uid://b6b4q8rcbgj83" path="res://scripts/freezing_snowflakes.gd" id="2_snowflakes"]
+[ext_resource type="PackedScene" path="res://snowflake.tscn" id="3_snowflake"]
 
 [node name="HUD" type="CanvasLayer" unique_id=699566821]
 process_mode = 3
@@ -14,7 +16,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.04, 0.72, 0.12, 0.0)
+color = Color(0.04, 0.72, 0.12, 0)
+
+[node name="FreezingSnowflakes" type="Control" parent="." unique_id=733941855]
+visible = false
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_snowflakes")
+snowflake_scene = ExtResource("3_snowflake")
+
+[node name="SpawnTimer" type="Timer" parent="FreezingSnowflakes" unique_id=165643823]
+one_shot = true
 
 [node name="ItemSlot" type="TextureRect" parent="." unique_id=2035413943]
 offset_right = 40.0
@@ -38,3 +56,5 @@ offset_top = -28.0
 offset_right = 350.0
 offset_bottom = -6.0
 grow_vertical = 0
+
+[connection signal="timeout" from="FreezingSnowflakes/SpawnTimer" to="FreezingSnowflakes" method="_on_spawn_timer_timeout"]

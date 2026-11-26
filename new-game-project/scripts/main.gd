@@ -35,6 +35,8 @@ func start_game() -> void:
 func start_symptoms(symptoms: Array) -> void:
 	symptom_effects.shakiness_enabled = symptoms.has("Shakiness")
 	$HUD/NauseaTint.visible = symptoms.has("Nausea")
+	symptom_effects.sloth_enabled = symptoms.has("Sloth")
+	symptom_effects.freezing_enabled = symptoms.has("Freezing")
 
 
 func _unhandled_input(event: InputEvent) -> void:

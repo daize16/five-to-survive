@@ -3,6 +3,8 @@ extends Camera2D
 @export var shakiness_enabled := false
 @export var max_shake := 5.0
 @export var start_at := 0.2
+var sloth_enabled := false
+var freezing_enabled := false
 
 @onready var run_timer: Timer = $"../RunTimer"
 @onready var cupboard_popup: CanvasLayer = $"../CupboardPopup"
@@ -13,6 +15,22 @@ func _process(_delta: float) -> void:
 	var intensity = symptom_intensity(progress) #general variable i made to scale the effects customised over time!
 	if nausea_tint.visible:
 		nausea_tint.color.a = intensity * 0.28
+
+	var snowflakes = get_node_or_null("../HUD/FreezingSnowflakes")
+	if snowflakes != null:
+		snowflakes.update_freezing(freezing_enabled, intensity)
+
+	#sloth symptom
+	var movement_multiplier = 1.0
+	if sloth_enabled:
+		var sloth_intensity = sqrt(intensity)
+		movement_multiplier = 1.0 - sloth_intensity * 0.55
+	elif freezing_enabled:
+		movement_multiplier = 1.0 - intensity * 0.20
+
+	var player = get_node_or_null("../Actors/Player")
+	if player != null:
+		player.symptom_speed_multiplier = movement_multiplier
 
 	var shake_offset := Vector2.ZERO
 
