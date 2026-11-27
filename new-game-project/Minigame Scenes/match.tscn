@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://xy3gy7stn8gd"]
 
-[ext_resource type="Script" uid="uid://dpqj61el1leb3" path="res://Minigames/match.gd" id="1_7y1jj"]
-[ext_resource type="Texture2D" uid="uid://bsojx62sioetk" path="res://temporaryImages/apple.png" id="2_2djil"]
-[ext_resource type="Texture2D" uid="uid://d0xu3jnrrl08p" path="res://temporaryImages/banana.png" id="3_g5f17"]
-[ext_resource type="Texture2D" uid="uid://qx7spp2aclr" path="res://temporaryImages/peach.png" id="4_nb2p7"]
-[ext_resource type="Texture2D" uid="uid://o6b0pr5ads4v" path="res://temporaryImages/grapes.png" id="5_xqdtl"]
-[ext_resource type="Texture2D" uid="uid://dwilgvndp2aym" path="res://temporaryImages/orange.png" id="6_eoldx"]
-[ext_resource type="Texture2D" uid="uid://cbft8u4gya6du" path="res://temporaryImages/raspberry.png" id="7_kuu8y"]
-[ext_resource type="Texture2D" uid="uid://bsf4occ71q37j" path="res://temporaryImages/strawberry.png" id="8_id2yp"]
-[ext_resource type="Texture2D" uid="uid://dxsaqct43kxmx" path="res://temporaryImages/dragonfruit.png" id="9_mhxom"]
+[ext_resource type="Script" uid="uid://dpqj61el1leb3" path="res://Minigame Scripts/match.gd" id="1_8pcbv"]
+[ext_resource type="Texture2D" uid="uid://bsojx62sioetk" path="res://temporaryImages/apple.png" id="2_vdkyq"]
+[ext_resource type="Texture2D" uid="uid://d0xu3jnrrl08p" path="res://temporaryImages/banana.png" id="3_prces"]
+[ext_resource type="Texture2D" uid="uid://qx7spp2aclr" path="res://temporaryImages/peach.png" id="4_6yxwa"]
+[ext_resource type="Texture2D" uid="uid://o6b0pr5ads4v" path="res://temporaryImages/grapes.png" id="5_ttha5"]
+[ext_resource type="Texture2D" uid="uid://dwilgvndp2aym" path="res://temporaryImages/orange.png" id="6_yt1lv"]
+[ext_resource type="Texture2D" uid="uid://cbft8u4gya6du" path="res://temporaryImages/raspberry.png" id="7_lbck4"]
+[ext_resource type="Texture2D" uid="uid://bsf4occ71q37j" path="res://temporaryImages/strawberry.png" id="8_5xue8"]
+[ext_resource type="Texture2D" uid="uid://dxsaqct43kxmx" path="res://temporaryImages/dragonfruit.png" id="9_jyool"]
 
 [node name="Control" type="Control" unique_id=916363332]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 484.0
 offset_bottom = 270.0
-script = ExtResource("1_7y1jj")
+script = ExtResource("1_8pcbv")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=1524562980]
 layout_mode = 1
@@ -37,7 +37,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("2_2djil")
+texture_normal = ExtResource("2_vdkyq")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -46,7 +46,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("2_2djil")
+texture_normal = ExtResource("2_vdkyq")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -55,7 +55,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("3_g5f17")
+texture_normal = ExtResource("3_prces")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -64,7 +64,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("3_g5f17")
+texture_normal = ExtResource("3_prces")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -73,7 +73,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("4_nb2p7")
+texture_normal = ExtResource("4_6yxwa")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -82,7 +82,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("4_nb2p7")
+texture_normal = ExtResource("4_6yxwa")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -91,7 +91,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("5_xqdtl")
+texture_normal = ExtResource("5_ttha5")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -100,7 +100,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("5_xqdtl")
+texture_normal = ExtResource("5_ttha5")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -109,7 +109,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("6_eoldx")
+texture_normal = ExtResource("6_yt1lv")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -118,7 +118,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("6_eoldx")
+texture_normal = ExtResource("6_yt1lv")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -127,7 +127,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("7_kuu8y")
+texture_normal = ExtResource("7_lbck4")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -136,7 +136,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("7_kuu8y")
+texture_normal = ExtResource("7_lbck4")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -145,7 +145,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("8_id2yp")
+texture_normal = ExtResource("8_5xue8")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -154,7 +154,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("8_id2yp")
+texture_normal = ExtResource("8_5xue8")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -163,7 +163,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("9_mhxom")
+texture_normal = ExtResource("9_jyool")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -172,7 +172,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("9_mhxom")
+texture_normal = ExtResource("9_jyool")
 ignore_texture_size = true
 stretch_mode = 0
 

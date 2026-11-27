@@ -27,10 +27,10 @@ func _process(delta: float) -> void:
 	
 	
 func playRound():
-	await get_tree().create_timer(1.0).timeout
 	if round == 5:
 		label3.text = "Won!"
 		return
+	await get_tree().create_timer(1.0).timeout
 	for x in range(0, round):
 		pressButAllow = false
 		var curButton = whichBut(x)
@@ -52,6 +52,8 @@ func checkBut(butNum):
 			playRound()
 	else:
 		label3.text = "wrong!"
+		await get_tree().create_timer(1.0).timeout
+		label3.text = ""
 		round = 1
 		butPress = 0
 		playRound()

@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://ccjhg3j1e6y8p"]
 
-[ext_resource type="Script" uid="uid://dd4dq3m3w7ex2" path="res://Minigames/anagrams.gd" id="1_ex0f4"]
+[ext_resource type="Script" uid="uid://dd4dq3m3w7ex2" path="res://Minigame Scripts/anagrams.gd" id="1_nyweq"]
 
 [node name="Control" type="Control" unique_id=843861175]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 481.0
 offset_bottom = 272.0
-script = ExtResource("1_ex0f4")
+script = ExtResource("1_nyweq")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1755950386]
 layout_mode = 1
