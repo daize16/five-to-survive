@@ -12,6 +12,7 @@ size = Vector2(32, 32)
 size = Vector2(45, 49)
 
 [node name="Cupboard" type="StaticBody2D" unique_id=667304056]
+scale = Vector2(1.2, 1.2)
 script = ExtResource("1_i8ors")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=546117078]

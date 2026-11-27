@@ -10,6 +10,7 @@ const POPUP_ART := "res://assets/cupboards/cupboard_%s_popup.png"
 var _cupboard: Cupboard
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	hide()
 
 func open_for(cupboard: Cupboard) -> void:
