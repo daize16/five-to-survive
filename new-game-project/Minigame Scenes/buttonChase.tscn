@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://brnijwddyiyti"]
 
-[ext_resource type="Script" uid="uid://c25cv42b4dp5t" path="res://Minigames/button_chase.gd" id="1_2qaq2"]
-[ext_resource type="Texture2D" uid="uid://cbft8u4gya6du" path="res://temporaryImages/raspberry.png" id="2_5h8w7"]
+[ext_resource type="Script" uid="uid://c25cv42b4dp5t" path="res://Minigame Scripts/button_chase.gd" id="1_0d44r"]
+[ext_resource type="Texture2D" uid="uid://cbft8u4gya6du" path="res://temporaryImages/raspberry.png" id="2_pmi2m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2qaq2"]
 bg_color = Color(0.3916392, 0.29037562, 0.25308117, 1)
@@ -14,7 +14,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 479.0
 offset_bottom = 269.0
-script = ExtResource("1_2qaq2")
+script = ExtResource("1_0d44r")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2018637497]
 layout_mode = 1
@@ -36,7 +36,7 @@ offset_left = 85.75
 offset_top = 54.75
 offset_right = 125.75
 offset_bottom = 94.75
-texture_normal = ExtResource("2_5h8w7")
+texture_normal = ExtResource("2_pmi2m")
 stretch_mode = 0
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=767659991]

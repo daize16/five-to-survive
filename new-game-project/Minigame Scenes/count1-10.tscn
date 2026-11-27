@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://k0l5rudqt7ni"]
 
-[ext_resource type="Script" uid="uid://cg52ogmn25pvw" path="res://Minigames/count1-10.gd" id="1_ocra7"]
+[ext_resource type="Script" uid="uid://cg52ogmn25pvw" path="res://Minigame Scripts/count1-10.gd" id="1_tktaa"]
 
 [node name="Control" type="Control" unique_id=545705467]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 480.0
 offset_bottom = 268.0
-script = ExtResource("1_ocra7")
+script = ExtResource("1_tktaa")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1675958630]
 layout_mode = 1
@@ -87,6 +87,13 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="." unique_id=830085570]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 186.0
+offset_right = 264.0
+offset_bottom = 209.0
 
 [connection signal="pressed" from="GridContainer/Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="GridContainer/Button2" to="." method="_on_button_2_pressed"]

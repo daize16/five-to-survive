@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://cy6xkrovy6jqq"]
+
+[ext_resource type="Script" uid="uid://de2nnx2yl8dub" path="res://Minigame Scripts/jigsaw.gd" id="1_c2eut"]
+[ext_resource type="Texture2D" uid="uid://ty1h37olyljb" path="res://assets/ingredients/mushrooms.png" id="2_gr14l"]
+
+[node name="Jigsaw" type="Control" unique_id=1834519839]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 480.0
+offset_bottom = 270.0
+script = ExtResource("1_c2eut")
+puzzleImage = ExtResource("2_gr14l")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1451903690]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.0
+offset_top = -117.0
+offset_right = 137.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1260058488]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 36.0
+offset_right = 57.0
+offset_bottom = 59.0
+
+[node name="Puzzleboard" type="Control" parent="." unique_id=836278661]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="BoardBackground" type="ColorRect" parent="Puzzleboard" unique_id=1186307595]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 19.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Puzzleboard" unique_id=724598070]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.5
+offset_top = -92.0
+offset_right = 97.5
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 3
+
+[node name="Piece1" type="TextureButton" parent="Puzzleboard/GridContainer" unique_id=932636732]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Piece2" type="TextureButton" parent="Puzzleboard/GridContainer" unique_id=867561101]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Piece3" type="TextureButton" parent="Puzzleboard/GridContainer" unique_id=469602615]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Piece4" type="TextureButton" parent="Puzzleboard/GridContainer" unique_id=496603418]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Piece5" type="TextureButton" parent="Puzzleboard/GridContainer" unique_id=1883790787]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Piece6" type="TextureButton" parent="Puzzleboard/GridContainer" unique_id=443689185]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Piece7" type="TextureButton" parent="Puzzleboard/GridContainer" unique_id=2107651685]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Piece8" type="TextureButton" parent="Puzzleboard/GridContainer" unique_id=766027731]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Piece9" type="TextureButton" parent="Puzzleboard/GridContainer" unique_id=841227949]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="Puzzleboard/GridContainer/Piece1" to="." method="_on_piece_1_pressed"]
+[connection signal="pressed" from="Puzzleboard/GridContainer/Piece2" to="." method="_on_piece_2_pressed"]
+[connection signal="pressed" from="Puzzleboard/GridContainer/Piece3" to="." method="_on_piece_3_pressed"]
+[connection signal="pressed" from="Puzzleboard/GridContainer/Piece4" to="." method="_on_piece_4_pressed"]
+[connection signal="pressed" from="Puzzleboard/GridContainer/Piece5" to="." method="_on_piece_5_pressed"]
+[connection signal="pressed" from="Puzzleboard/GridContainer/Piece6" to="." method="_on_piece_6_pressed"]
+[connection signal="pressed" from="Puzzleboard/GridContainer/Piece7" to="." method="_on_piece_7_pressed"]
+[connection signal="pressed" from="Puzzleboard/GridContainer/Piece8" to="." method="_on_piece_8_pressed"]
+[connection signal="pressed" from="Puzzleboard/GridContainer/Piece9" to="." method="_on_piece_9_pressed"]

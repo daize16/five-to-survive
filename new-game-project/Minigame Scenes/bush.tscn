@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c62tecxsulgsf"]
 
-[ext_resource type="Script" uid="uid://cyp6nghgchcca" path="res://Minigames/bush.gd" id="1_2a6ie"]
-[ext_resource type="Texture2D" uid="uid://6oa1k67s82ed" path="res://Minigame Assets/pixil-frame-0 (6).png" id="2_2a6ie"]
-[ext_resource type="Texture2D" uid="uid://d3uh5i42u3ajg" path="res://Minigame Assets/pixil-frame-0 (4).png" id="2_7rklq"]
+[ext_resource type="Script" uid="uid://cyp6nghgchcca" path="res://Minigame Scripts/bush.gd" id="1_1jnia"]
+[ext_resource type="Texture2D" uid="uid://6oa1k67s82ed" path="res://Minigame Assets/pixil-frame-0 (6).png" id="2_rk4di"]
+[ext_resource type="Texture2D" uid="uid://d3uh5i42u3ajg" path="res://Minigame Assets/pixil-frame-0 (4).png" id="3_5oknv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_st8ct"]
 radius = 2.0
@@ -22,7 +22,7 @@ offset_bottom = 104.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-script = ExtResource("1_2a6ie")
+script = ExtResource("1_1jnia")
 
 [node name="Label" type="Label" parent="." unique_id=547419846]
 layout_mode = 0
@@ -37,7 +37,7 @@ scale = Vector2(2, 2)
 
 [node name="Bush" type="Sprite2D" parent="Node2D" unique_id=806201296]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_2a6ie")
+texture = ExtResource("2_rk4di")
 
 [node name="Thorn1" type="Area2D" parent="Node2D" unique_id=1257157995]
 position = Vector2(25.5, 15)
@@ -47,7 +47,7 @@ metadata/_edit_group_ = true
 [node name="Thorn1Img" type="Sprite2D" parent="Node2D/Thorn1" unique_id=65264794]
 rotation = 0.23561946
 scale = Vector2(0.15588745, 0.16097465)
-texture = ExtResource("2_7rklq")
+texture = ExtResource("3_5oknv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn1" unique_id=479743442]
 position = Vector2(1.2300987, -1.5560913)
@@ -61,7 +61,7 @@ metadata/_edit_group_ = true
 [node name="Thorn2Img" type="Sprite2D" parent="Node2D/Thorn2" unique_id=1334978320]
 rotation = 0.23561946
 scale = Vector2(0.15588745, 0.16097465)
-texture = ExtResource("2_7rklq")
+texture = ExtResource("3_5oknv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn2" unique_id=1164266391]
 position = Vector2(1.2492371, -1.5665512)
@@ -75,7 +75,7 @@ metadata/_edit_group_ = true
 [node name="Thorn3Img" type="Sprite2D" parent="Node2D/Thorn3" unique_id=550370975]
 rotation = 0.23561946
 scale = Vector2(0.15588745, 0.16097465)
-texture = ExtResource("2_7rklq")
+texture = ExtResource("3_5oknv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn3" unique_id=2119273633]
 position = Vector2(1.1767349, -1.5322647)
@@ -89,7 +89,7 @@ metadata/_edit_group_ = true
 [node name="Thorn4Img" type="Sprite2D" parent="Node2D/Thorn4" unique_id=442111908]
 rotation = 0.23561946
 scale = Vector2(0.15588745, 0.16097465)
-texture = ExtResource("2_7rklq")
+texture = ExtResource("3_5oknv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn4" unique_id=1243118192]
 position = Vector2(1.1031036, -1.510746)
@@ -104,7 +104,7 @@ metadata/_edit_group_ = true
 position = Vector2(0.41241455, 1.8951416)
 rotation = -1.1728612
 scale = Vector2(0.15588745, 0.16097465)
-texture = ExtResource("2_7rklq")
+texture = ExtResource("3_5oknv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn5" unique_id=154323596]
 position = Vector2(-1.0338593, 0.4725113)
@@ -119,7 +119,7 @@ metadata/_edit_group_ = true
 [node name="Thorn6Img" type="Sprite2D" parent="Node2D/Thorn6" unique_id=2071623513]
 rotation = -0.23387411
 scale = Vector2(0.15588745, 0.16097465)
-texture = ExtResource("2_7rklq")
+texture = ExtResource("3_5oknv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn6" unique_id=1129467045]
 position = Vector2(0.5107422, -1.8968964)
@@ -135,7 +135,7 @@ metadata/_edit_group_ = true
 position = Vector2(1.422821, 1.6890869)
 rotation = -2.347468
 scale = Vector2(0.15588745, 0.16097465)
-texture = ExtResource("2_7rklq")
+texture = ExtResource("3_5oknv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn7" unique_id=312532840]
 position = Vector2(-0.6214485, 2.4295654)
@@ -151,7 +151,7 @@ metadata/_edit_group_ = true
 position = Vector2(0.8041992, -1.1537933)
 rotation = -4.2271876
 scale = Vector2(0.15588745, 0.16097465)
-texture = ExtResource("2_7rklq")
+texture = ExtResource("3_5oknv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn8" unique_id=2113000045]
 position = Vector2(2.0047646, 0.34316254)
@@ -167,7 +167,7 @@ metadata/_edit_group_ = true
 position = Vector2(2.020813, -0.41235352)
 rotation = -3.5220745
 scale = Vector2(0.15588745, 0.16097465)
-texture = ExtResource("2_7rklq")
+texture = ExtResource("3_5oknv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn9" unique_id=1936212817]
 position = Vector2(1.7217178, 1.4247818)
@@ -182,7 +182,7 @@ metadata/_edit_group_ = true
 [node name="Thorn10Img" type="Sprite2D" parent="Node2D/Thorn10" unique_id=311182222]
 rotation = 3.8763762
 scale = Vector2(0.15588745, 0.16097465)
-texture = ExtResource("2_7rklq")
+texture = ExtResource("3_5oknv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn10" unique_id=2139395468]
 position = Vector2(-2.0123749, 0.6787529)
@@ -198,7 +198,7 @@ metadata/_edit_group_ = true
 position = Vector2(0.41253662, 1.8952026)
 rotation = -1.1519173
 scale = Vector2(0.15588745, 0.16097465)
-texture = ExtResource("2_7rklq")
+texture = ExtResource("3_5oknv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn11" unique_id=846310199]
 position = Vector2(-1.0338707, 0.47253418)
@@ -213,7 +213,7 @@ metadata/_edit_group_ = true
 [node name="Thorn12Img" type="Sprite2D" parent="Node2D/Thorn12" unique_id=1389194422]
 rotation = -0.8220501
 scale = Vector2(0.15588745, 0.16097465)
-texture = ExtResource("2_7rklq")
+texture = ExtResource("3_5oknv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn12" unique_id=1222653309]
 position = Vector2(-0.9570236, -1.5875778)

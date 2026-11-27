@@ -12,6 +12,7 @@ var count: int = 1
 @onready var button8 = $GridContainer/Button8 
 @onready var button9 = $GridContainer/Button9 
 @onready var button10 = $GridContainer/Button10 
+@onready var winLabel = $Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -54,7 +55,7 @@ func check_button(button):
 		count = 1
 		
 	if count == 11:
-		button4.text = "Won!"
+		winLabel.text = "Won!"
 
 
 func _on_button_1_pressed() -> void:

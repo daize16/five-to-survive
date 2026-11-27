@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dh62w7sg7ihv8"]
 
-[ext_resource type="Script" uid="uid://dn3idgvh67w5" path="res://Minigames/simon_says.gd" id="1_u2lx4"]
+[ext_resource type="Script" uid="uid://dn3idgvh67w5" path="res://Minigame Scripts/simon_says.gd" id="1_6r1ve"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2lx4"]
 bg_color = Color(0, 0.85490197, 0, 1)
@@ -9,7 +9,7 @@ bg_color = Color(0, 0.85490197, 0, 1)
 bg_color = Color(0, 0.8235294, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mlvku"]
-bg_color = Color(0, 0.85490197, 0, 1)
+bg_color = Color(5.6072327e-06, 0.717118, 9.62615e-07, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlqnw"]
 bg_color = Color(0.14509805, 0.7529412, 1, 1)
@@ -20,11 +20,11 @@ bg_color = Color(0.14509805, 0.7529412, 1, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gtvgo"]
 bg_color = Color(0.14509805, 0.6666667, 1, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_owuc0"]
-bg_color = Color(0.94339466, 0.9433941, 7.70092e-07, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibhb8"]
+bg_color = Color(0.7773591, 0.77735925, 3.85046e-07, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dn4wy"]
-bg_color = Color(0.94509804, 0.94509804, 0, 1)
+bg_color = Color(0.7764706, 0.7764706, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ne2k0"]
 bg_color = Color(0.83600616, 0.83600646, 0, 1)
@@ -43,7 +43,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 481.0
 offset_bottom = 271.0
-script = ExtResource("1_u2lx4")
+script = ExtResource("1_6r1ve")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=644613671]
 layout_mode = 1
@@ -80,7 +80,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gtvgo")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_owuc0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ibhb8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dn4wy")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ne2k0")
 
