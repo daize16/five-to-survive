@@ -101,7 +101,7 @@ func _ready():
 
 
 func _unhandled_input(event):
-	if event.is_action_pressed("ui_cancel") and overlay.visible:
+	if overlay.visible and (event.is_action_pressed("ui_cancel") or event.is_action_pressed("interact")):
 		close_book()
 		get_viewport().set_input_as_handled()
 

@@ -185,7 +185,6 @@ shape = SubResource("RectangleShape2D_furniture_blocker")
 [node name="CupboardPopup" parent="." unique_id=647663135 instance=ExtResource("8_5vw27")]
 
 [node name="Book" parent="." unique_id=529358681 instance=ExtResource("9_book")]
-visible = false
 
 [node name="SymptomEffects" type="Camera2D" parent="." unique_id=1668557637]
 process_mode = 3

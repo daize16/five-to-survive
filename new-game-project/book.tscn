@@ -3,17 +3,23 @@
 [ext_resource type="Script" uid="uid://6ap1imm8b53x" path="res://scripts/book.gd" id="1_book"]
 [ext_resource type="Script" uid="uid://bmb2516vwu0h6" path="res://scripts/book_page.gd" id="2_page_art"]
 
+[sub_resource type="Theme" id="Theme_book"]
+default_font_size = 12
+Label/colors/font_color = Color(0.26, 0.18, 0.12, 1)
+
 [node name="Book" type="CanvasLayer" unique_id=183388082]
 layer = 2
 script = ExtResource("1_book")
 
 [node name="Overlay" type="Control" parent="." unique_id=919875176]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_book")
 
 [node name="DimBackground" type="ColorRect" parent="Overlay" unique_id=634497466]
 layout_mode = 1
@@ -64,6 +70,7 @@ layout_mode = 2
 text = "Book of Ilnesses and Common Ailments"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="IndexColumnLeft" type="VBoxContainer" parent="Overlay/BookSpread/LeftPage/LeftMargin/LeftLayout" unique_id=533469713]
 custom_minimum_size = Vector2(0, 132)
@@ -127,6 +134,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "INDEX • CONTINUED"
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="CloseButton" type="Button" parent="Overlay/BookSpread/RightPage/RightMargin/RightLayout/RightHeader" unique_id=68413464]
 custom_minimum_size = Vector2(46, 23)
@@ -168,6 +176,7 @@ offset_top = 96.0
 offset_right = 14.0
 offset_bottom = 142.0
 focus_mode = 0
+theme_override_font_sizes/font_size = 16
 text = "◀"
 
 [node name="NextButton" type="Button" parent="Overlay/BookSpread" unique_id=2115504416]
@@ -177,4 +186,5 @@ offset_top = 96.0
 offset_right = 450.0
 offset_bottom = 142.0
 focus_mode = 0
+theme_override_font_sizes/font_size = 16
 text = "▶"

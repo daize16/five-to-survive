@@ -46,10 +46,16 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	if run_state != "playing":
 		return
+
+	var interact_pressed := event.is_action_pressed("interact")
+	if interact_pressed and $Actors/BookLectern.try_read_book():
+		get_viewport().set_input_as_handled()
+		return
+
 	if not $Actors/CauldronArea.overlaps_body($Actors/Player):
 		return
 
-	var use_cauldron := event.is_action_pressed("interact")
+	var use_cauldron := interact_pressed
 	if event is InputEventMouseButton and event.pressed \
 			and event.button_index == MOUSE_BUTTON_LEFT:
 		var cauldron = $Actors/Cauldron

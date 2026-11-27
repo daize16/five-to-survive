@@ -22,9 +22,7 @@ func _on_mouse_entered() -> void:
 
 func _on_mouse_exited() -> void:
 	_is_hovered = false
-	hover_label.hide()
-	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
-	sprite.modulate = Color.WHITE
+	_update_hover()
 
 func _on_proximity_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -37,20 +35,23 @@ func _on_proximity_body_exited(body: Node2D) -> void:
 		_update_hover()
 
 func _update_hover() -> void:
-	if not _is_hovered:
-		return
-	hover_label.text = "Reference Book\nClick to read" if _player_near else "Reference Book\nWalk closer"
-	hover_label.show()
-	if _player_near:
+	hover_label.visible = _is_hovered or _player_near
+	hover_label.text = "Reference Book\nE / click to read" if _player_near else "Reference Book\nWalk closer"
+	if _is_hovered and _player_near:
 		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 		sprite.modulate = Color("fff0ce")
 	else:
 		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 		sprite.modulate = Color.WHITE
 
+func try_read_book() -> bool:
+	if not _player_near:
+		return false
+	get_tree().call_group("book_ui", "open_book")
+	return true
+
 func _on_input_event(_viewport: Viewport, event: InputEvent, _shape_index: int) -> void:
 	if (event is InputEventMouseButton and event.pressed
 			and event.button_index == MOUSE_BUTTON_LEFT):
-		if _player_near:
-			get_tree().call_group("book_ui", "open_book")
+		try_read_book()
 		get_viewport().set_input_as_handled()
