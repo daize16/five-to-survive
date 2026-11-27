@@ -1,0 +1,258 @@
+[gd_scene format=3 uid="uid://c62tecxsulgsf"]
+
+[ext_resource type="Script" uid="uid://cyp6nghgchcca" path="res://Minigames/bush.gd" id="1_2a6ie"]
+[ext_resource type="Texture2D" uid="uid://6oa1k67s82ed" path="res://Minigame Assets/pixil-frame-0 (6).png" id="2_2a6ie"]
+[ext_resource type="Texture2D" uid="uid://d3uh5i42u3ajg" path="res://Minigame Assets/pixil-frame-0 (4).png" id="2_7rklq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_st8ct"]
+radius = 2.0
+height = 6.609375
+
+[node name="Control" type="Control" unique_id=38568857]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -104.0
+offset_right = 120.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_2a6ie")
+
+[node name="Label" type="Label" parent="." unique_id=547419846]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 6.0
+offset_right = 49.0
+offset_bottom = 29.0
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1677801314]
+position = Vector2(120, 104)
+scale = Vector2(2, 2)
+
+[node name="Bush" type="Sprite2D" parent="Node2D" unique_id=806201296]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_2a6ie")
+
+[node name="Thorn1" type="Area2D" parent="Node2D" unique_id=1257157995]
+position = Vector2(25.5, 15)
+rotation = 2.0490165
+metadata/_edit_group_ = true
+
+[node name="Thorn1Img" type="Sprite2D" parent="Node2D/Thorn1" unique_id=65264794]
+rotation = 0.23561946
+scale = Vector2(0.15588745, 0.16097465)
+texture = ExtResource("2_7rklq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn1" unique_id=479743442]
+position = Vector2(1.2300987, -1.5560913)
+shape = SubResource("CapsuleShape2D_st8ct")
+
+[node name="Thorn2" type="Area2D" parent="Node2D" unique_id=389760751]
+position = Vector2(3, 5)
+rotation = 0.52185345
+metadata/_edit_group_ = true
+
+[node name="Thorn2Img" type="Sprite2D" parent="Node2D/Thorn2" unique_id=1334978320]
+rotation = 0.23561946
+scale = Vector2(0.15588745, 0.16097465)
+texture = ExtResource("2_7rklq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn2" unique_id=1164266391]
+position = Vector2(1.2492371, -1.5665512)
+shape = SubResource("CapsuleShape2D_st8ct")
+
+[node name="Thorn3" type="Area2D" parent="Node2D" unique_id=1660055981]
+position = Vector2(28, -7)
+rotation = 1.9320794
+metadata/_edit_group_ = true
+
+[node name="Thorn3Img" type="Sprite2D" parent="Node2D/Thorn3" unique_id=550370975]
+rotation = 0.23561946
+scale = Vector2(0.15588745, 0.16097465)
+texture = ExtResource("2_7rklq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn3" unique_id=2119273633]
+position = Vector2(1.1767349, -1.5322647)
+shape = SubResource("CapsuleShape2D_st8ct")
+
+[node name="Thorn4" type="Area2D" parent="Node2D" unique_id=913413094]
+position = Vector2(-22, -6)
+rotation = -1.3631022
+metadata/_edit_group_ = true
+
+[node name="Thorn4Img" type="Sprite2D" parent="Node2D/Thorn4" unique_id=442111908]
+rotation = 0.23561946
+scale = Vector2(0.15588745, 0.16097465)
+texture = ExtResource("2_7rklq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn4" unique_id=1243118192]
+position = Vector2(1.1031036, -1.510746)
+shape = SubResource("CapsuleShape2D_st8ct")
+
+[node name="Thorn5" type="Area2D" parent="Node2D" unique_id=243652781]
+position = Vector2(-30, 23)
+rotation = -1.3631022
+metadata/_edit_group_ = true
+
+[node name="Thorn5Img" type="Sprite2D" parent="Node2D/Thorn5" unique_id=1033765721]
+position = Vector2(0.41241455, 1.8951416)
+rotation = -1.1728612
+scale = Vector2(0.15588745, 0.16097465)
+texture = ExtResource("2_7rklq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn5" unique_id=154323596]
+position = Vector2(-1.0338593, 0.4725113)
+rotation = -1.4084808
+shape = SubResource("CapsuleShape2D_st8ct")
+
+[node name="Thorn6" type="Area2D" parent="Node2D" unique_id=877584729]
+position = Vector2(-12, 12)
+rotation = -1.3631022
+metadata/_edit_group_ = true
+
+[node name="Thorn6Img" type="Sprite2D" parent="Node2D/Thorn6" unique_id=2071623513]
+rotation = -0.23387411
+scale = Vector2(0.15588745, 0.16097465)
+texture = ExtResource("2_7rklq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn6" unique_id=1129467045]
+position = Vector2(0.5107422, -1.8968964)
+rotation = -0.3525565
+shape = SubResource("CapsuleShape2D_st8ct")
+
+[node name="Thorn7" type="Area2D" parent="Node2D" unique_id=2076571020]
+position = Vector2(3, 26)
+rotation = -1.3631022
+metadata/_edit_group_ = true
+
+[node name="Thorn7Img" type="Sprite2D" parent="Node2D/Thorn7" unique_id=1395351941]
+position = Vector2(1.422821, 1.6890869)
+rotation = -2.347468
+scale = Vector2(0.15588745, 0.16097465)
+texture = ExtResource("2_7rklq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn7" unique_id=312532840]
+position = Vector2(-0.6214485, 2.4295654)
+rotation = 0.46949357
+shape = SubResource("CapsuleShape2D_st8ct")
+
+[node name="Thorn8" type="Area2D" parent="Node2D" unique_id=315944737]
+position = Vector2(-5, -18)
+rotation = -1.3631022
+metadata/_edit_group_ = true
+
+[node name="Thorn8Img" type="Sprite2D" parent="Node2D/Thorn8" unique_id=1072653802]
+position = Vector2(0.8041992, -1.1537933)
+rotation = -4.2271876
+scale = Vector2(0.15588745, 0.16097465)
+texture = ExtResource("2_7rklq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn8" unique_id=2113000045]
+position = Vector2(2.0047646, 0.34316254)
+rotation = -1.6441002
+shape = SubResource("CapsuleShape2D_st8ct")
+
+[node name="Thorn9" type="Area2D" parent="Node2D" unique_id=1532074384]
+position = Vector2(34, 8)
+rotation = -1.3631022
+metadata/_edit_group_ = true
+
+[node name="Thorn9Img" type="Sprite2D" parent="Node2D/Thorn9" unique_id=1681965867]
+position = Vector2(2.020813, -0.41235352)
+rotation = -3.5220745
+scale = Vector2(0.15588745, 0.16097465)
+texture = ExtResource("2_7rklq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn9" unique_id=1936212817]
+position = Vector2(1.7217178, 1.4247818)
+rotation = -0.8220501
+shape = SubResource("CapsuleShape2D_st8ct")
+
+[node name="Thorn10" type="Area2D" parent="Node2D" unique_id=24907925]
+position = Vector2(-3.5, -8)
+rotation = -1.3631022
+metadata/_edit_group_ = true
+
+[node name="Thorn10Img" type="Sprite2D" parent="Node2D/Thorn10" unique_id=311182222]
+rotation = 3.8763762
+scale = Vector2(0.15588745, 0.16097465)
+texture = ExtResource("2_7rklq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn10" unique_id=2139395468]
+position = Vector2(-2.0123749, 0.6787529)
+rotation = 0.35081118
+shape = SubResource("CapsuleShape2D_st8ct")
+
+[node name="Thorn11" type="Area2D" parent="Node2D" unique_id=2123904394]
+position = Vector2(7, 13)
+rotation = -1.3631022
+metadata/_edit_group_ = true
+
+[node name="Thorn11Img" type="Sprite2D" parent="Node2D/Thorn11" unique_id=77146489]
+position = Vector2(0.41253662, 1.8952026)
+rotation = -1.1519173
+scale = Vector2(0.15588745, 0.16097465)
+texture = ExtResource("2_7rklq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn11" unique_id=846310199]
+position = Vector2(-1.0338707, 0.47253418)
+rotation = -1.5271631
+shape = SubResource("CapsuleShape2D_st8ct")
+
+[node name="Thorn12" type="Area2D" parent="Node2D" unique_id=623579961]
+position = Vector2(-40, 4)
+rotation = -1.3631022
+metadata/_edit_group_ = true
+
+[node name="Thorn12Img" type="Sprite2D" parent="Node2D/Thorn12" unique_id=1389194422]
+rotation = -0.8220501
+scale = Vector2(0.15588745, 0.16097465)
+texture = ExtResource("2_7rklq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Thorn12" unique_id=1222653309]
+position = Vector2(-0.9570236, -1.5875778)
+rotation = -1.293289
+shape = SubResource("CapsuleShape2D_st8ct")
+
+[connection signal="input_event" from="Node2D/Thorn1" to="." method="_on_thorn_1_input_event"]
+[connection signal="mouse_entered" from="Node2D/Thorn1" to="." method="_on_thorn_1_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Thorn1" to="." method="_on_thorn_1_mouse_exited"]
+[connection signal="input_event" from="Node2D/Thorn2" to="." method="_on_thorn_2_input_event"]
+[connection signal="mouse_entered" from="Node2D/Thorn2" to="." method="_on_thorn_2_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Thorn2" to="." method="_on_thorn_2_mouse_exited"]
+[connection signal="input_event" from="Node2D/Thorn3" to="." method="_on_thorn_3_input_event"]
+[connection signal="mouse_entered" from="Node2D/Thorn3" to="." method="_on_thorn_3_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Thorn3" to="." method="_on_thorn_3_mouse_exited"]
+[connection signal="input_event" from="Node2D/Thorn4" to="." method="_on_thorn_4_input_event"]
+[connection signal="mouse_entered" from="Node2D/Thorn4" to="." method="_on_thorn_4_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Thorn4" to="." method="_on_thorn_4_mouse_exited"]
+[connection signal="input_event" from="Node2D/Thorn5" to="." method="_on_thorn_5_input_event"]
+[connection signal="mouse_entered" from="Node2D/Thorn5" to="." method="_on_thorn_5_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Thorn5" to="." method="_on_thorn_5_mouse_exited"]
+[connection signal="input_event" from="Node2D/Thorn6" to="." method="_on_thorn_6_input_event"]
+[connection signal="mouse_entered" from="Node2D/Thorn6" to="." method="_on_thorn_6_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Thorn6" to="." method="_on_thorn_6_mouse_exited"]
+[connection signal="input_event" from="Node2D/Thorn7" to="." method="_on_thorn_7_input_event"]
+[connection signal="mouse_entered" from="Node2D/Thorn7" to="." method="_on_thorn_7_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Thorn7" to="." method="_on_thorn_7_mouse_exited"]
+[connection signal="input_event" from="Node2D/Thorn8" to="." method="_on_thorn_8_input_event"]
+[connection signal="mouse_entered" from="Node2D/Thorn8" to="." method="_on_thorn_8_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Thorn8" to="." method="_on_thorn_8_mouse_exited"]
+[connection signal="input_event" from="Node2D/Thorn9" to="." method="_on_thorn_9_input_event"]
+[connection signal="mouse_entered" from="Node2D/Thorn9" to="." method="_on_thorn_9_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Thorn9" to="." method="_on_thorn_9_mouse_exited"]
+[connection signal="input_event" from="Node2D/Thorn10" to="." method="_on_thorn_10_input_event"]
+[connection signal="mouse_entered" from="Node2D/Thorn10" to="." method="_on_thorn_10_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Thorn10" to="." method="_on_thorn_10_mouse_exited"]
+[connection signal="input_event" from="Node2D/Thorn11" to="." method="_on_thorn_11_input_event"]
+[connection signal="mouse_entered" from="Node2D/Thorn11" to="." method="_on_thorn_11_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Thorn11" to="." method="_on_thorn_11_mouse_exited"]
+[connection signal="input_event" from="Node2D/Thorn12" to="." method="_on_thorn_12_input_event"]
+[connection signal="mouse_entered" from="Node2D/Thorn12" to="." method="_on_thorn_12_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Thorn12" to="." method="_on_thorn_12_mouse_exited"]

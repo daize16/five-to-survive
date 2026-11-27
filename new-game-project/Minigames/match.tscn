@@ -1,0 +1,201 @@
+[gd_scene format=3 uid="uid://xy3gy7stn8gd"]
+
+[ext_resource type="Script" uid="uid://dpqj61el1leb3" path="res://Minigames/match.gd" id="1_7y1jj"]
+[ext_resource type="Texture2D" uid="uid://bsojx62sioetk" path="res://temporaryImages/apple.png" id="2_2djil"]
+[ext_resource type="Texture2D" uid="uid://d0xu3jnrrl08p" path="res://temporaryImages/banana.png" id="3_g5f17"]
+[ext_resource type="Texture2D" uid="uid://qx7spp2aclr" path="res://temporaryImages/peach.png" id="4_nb2p7"]
+[ext_resource type="Texture2D" uid="uid://o6b0pr5ads4v" path="res://temporaryImages/grapes.png" id="5_xqdtl"]
+[ext_resource type="Texture2D" uid="uid://dwilgvndp2aym" path="res://temporaryImages/orange.png" id="6_eoldx"]
+[ext_resource type="Texture2D" uid="uid://cbft8u4gya6du" path="res://temporaryImages/raspberry.png" id="7_kuu8y"]
+[ext_resource type="Texture2D" uid="uid://bsf4occ71q37j" path="res://temporaryImages/strawberry.png" id="8_id2yp"]
+[ext_resource type="Texture2D" uid="uid://dxsaqct43kxmx" path="res://temporaryImages/dragonfruit.png" id="9_mhxom"]
+
+[node name="Control" type="Control" unique_id=916363332]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 484.0
+offset_bottom = 270.0
+script = ExtResource("1_7y1jj")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1524562980]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.5
+offset_top = -62.5
+offset_right = 62.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="Button1" type="TextureButton" parent="GridContainer" unique_id=1323700392]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_2djil")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button2" type="TextureButton" parent="GridContainer" unique_id=578372995]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_2djil")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button3" type="TextureButton" parent="GridContainer" unique_id=922402599]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_g5f17")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button4" type="TextureButton" parent="GridContainer" unique_id=1403594906]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("3_g5f17")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button5" type="TextureButton" parent="GridContainer" unique_id=2136720893]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("4_nb2p7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button6" type="TextureButton" parent="GridContainer" unique_id=949848580]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("4_nb2p7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button7" type="TextureButton" parent="GridContainer" unique_id=1883680892]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_xqdtl")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button8" type="TextureButton" parent="GridContainer" unique_id=996762947]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("5_xqdtl")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button9" type="TextureButton" parent="GridContainer" unique_id=892268268]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("6_eoldx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button10" type="TextureButton" parent="GridContainer" unique_id=1090050624]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("6_eoldx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button11" type="TextureButton" parent="GridContainer" unique_id=1144299317]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("7_kuu8y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button12" type="TextureButton" parent="GridContainer" unique_id=2117663640]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("7_kuu8y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button13" type="TextureButton" parent="GridContainer" unique_id=2037530571]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("8_id2yp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button14" type="TextureButton" parent="GridContainer" unique_id=1764322695]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("8_id2yp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button15" type="TextureButton" parent="GridContainer" unique_id=1321364081]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("9_mhxom")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button16" type="TextureButton" parent="GridContainer" unique_id=1480747562]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("9_mhxom")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="." unique_id=1390390030]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 5.0
+offset_right = 88.0
+offset_bottom = 28.0
+
+[connection signal="pressed" from="GridContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="GridContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="GridContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="GridContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="GridContainer/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="GridContainer/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="GridContainer/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="GridContainer/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="GridContainer/Button9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="GridContainer/Button10" to="." method="_on_button_10_pressed"]
+[connection signal="pressed" from="GridContainer/Button11" to="." method="_on_button_11_pressed"]
+[connection signal="pressed" from="GridContainer/Button12" to="." method="_on_button_12_pressed"]
+[connection signal="pressed" from="GridContainer/Button13" to="." method="_on_button_13_pressed"]
+[connection signal="pressed" from="GridContainer/Button14" to="." method="_on_button_14_pressed"]
+[connection signal="pressed" from="GridContainer/Button15" to="." method="_on_button_15_pressed"]
+[connection signal="pressed" from="GridContainer/Button16" to="." method="_on_button_16_pressed"]

@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://ccjhg3j1e6y8p"]
+
+[ext_resource type="Script" uid="uid://dd4dq3m3w7ex2" path="res://Minigames/anagrams.gd" id="1_ex0f4"]
+
+[node name="Control" type="Control" unique_id=843861175]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 481.0
+offset_bottom = 272.0
+script = ExtResource("1_ex0f4")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1755950386]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.25
+offset_top = -56.0
+offset_right = 101.25
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Word" type="Label" parent="ColorRect" unique_id=1373273658]
+layout_mode = 0
+offset_left = 38.75
+offset_top = 21.0
+offset_right = 165.75
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+
+[node name="InputText" type="LineEdit" parent="ColorRect" unique_id=343397881]
+layout_mode = 0
+offset_left = 67.75
+offset_top = 55.0
+offset_right = 136.25
+offset_bottom = 86.0
+
+[node name="Button" type="Button" parent="ColorRect" unique_id=1427934556]
+layout_mode = 0
+offset_left = 152.75
+offset_top = 63.0
+offset_right = 215.75
+offset_bottom = 94.0
+scale = Vector2(0.5, 0.5)
+text = "Submit"
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=117221011]
+layout_mode = 0
+offset_left = 12.75
+offset_top = 59.0
+offset_right = 52.75
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]

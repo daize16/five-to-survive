@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://k0l5rudqt7ni"]
+
+[ext_resource type="Script" uid="uid://cg52ogmn25pvw" path="res://Minigames/count1-10.gd" id="1_ocra7"]
+
+[node name="Control" type="Control" unique_id=545705467]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 480.0
+offset_bottom = 268.0
+script = ExtResource("1_ocra7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1675958630]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -40.0
+offset_right = 69.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=381525776]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.5
+offset_top = -16.75
+offset_right = 45.5
+offset_bottom = 16.75
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+
+[node name="Button1" type="Button" parent="GridContainer" unique_id=678067396]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="GridContainer" unique_id=1456563875]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button3" type="Button" parent="GridContainer" unique_id=990493509]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button4" type="Button" parent="GridContainer" unique_id=860531218]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button5" type="Button" parent="GridContainer" unique_id=340781160]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button6" type="Button" parent="GridContainer" unique_id=2062653747]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button7" type="Button" parent="GridContainer" unique_id=1969081939]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button8" type="Button" parent="GridContainer" unique_id=97381140]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button9" type="Button" parent="GridContainer" unique_id=1283963222]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button10" type="Button" parent="GridContainer" unique_id=518738745]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="pressed" from="GridContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="GridContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="GridContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="GridContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="GridContainer/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="GridContainer/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="GridContainer/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="GridContainer/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="GridContainer/Button9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="GridContainer/Button10" to="." method="_on_button_10_pressed"]

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var speed: float = 100.0
+var symptom_speed_multiplier := 1.0
 var screen_size: Vector2
 var facing := "right"
 var nearby: Cupboard = null
@@ -27,7 +28,7 @@ func _physics_process(_delta: float) -> void:
 	else:
 		sprite.stop()
 
-	velocity = direction * speed
+	velocity = direction * speed * symptom_speed_multiplier
 	move_and_slide()
 
 	position = position.clamp(Vector2.ZERO, screen_size)

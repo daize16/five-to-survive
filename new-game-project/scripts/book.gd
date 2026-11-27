@@ -4,62 +4,62 @@ const AILMENTS := [
 	{
 		"name": "Aloria",
 		"symptoms": ["Shakiness", "Dizziness", "Fainting", "Twitching"],
-		"cure": ["Spider silk", "Bat wings", "Well water", "Shattered mirror"]
+		"cure": ["spider_silk", "bat_wings", "well_water", "shattered_mirror"]
 	},
 	{
 		"name": "Crimson Pox",
 		"symptoms": ["Vomiting", "Nausea", "Shakiness", "Dizziness"],
-		"cure": ["Shattered mirror", "Ghost orchid", "Eye of newt", "Mushrooms"]
+		"cure": ["shattered_mirror", "ghost_orchid", "eye_of_newt", "mushrooms"]
 	},
 	{
 		"name": "Arsenic Poisoning",
 		"symptoms": ["Nausea", "Vomiting", "Paranoia"],
-		"cure": ["Eye of newt", "Bat wings", "Beeswax", "Glow worms"]
+		"cure": ["eye_of_newt", "bat_wings", "beeswax", "glow_worms"]
 	},
 	{
 		"name": "Shiverrot",
 		"symptoms": ["Twitching", "Freezing", "Weakness"],
-		"cure": ["Glow worms", "Beeswax", "Crushed beetles", "Eye of newt"]
+		"cure": ["glow_worms", "beeswax", "crushed_beetles", "eye_of_newt"]
 	},
 	{
 		"name": "Shadowlung",
 		"symptoms": ["Vomiting", "Twitching", "Dizziness"],
-		"cure": ["Mushrooms", "Bat wings", "Frozen flame", "Raven feather"]
+		"cure": ["mushrooms", "bat_wings", "frozen_flame", "raven_feather"]
 	},
 	{
 		"name": "Nightshade's Kiss",
 		"symptoms": ["Hallucinations (lover)", "Fainting", "Blindness"],
-		"cure": ["Ghost orchid", "Tears of a widow", "Belladonna berries", "Frog legs"]
+		"cure": ["ghost_orchid", "widows_tears", "belladonna_berries", "frog_legs"]
 	},
 	{
 		"name": "Withering Wart",
 		"symptoms": ["Shakiness", "Twitching", "Overheating", "Fainting"],
-		"cure": ["Spider silk", "Mushrooms", "Frog legs", "Raven feather"]
+		"cure": ["spider_silk", "mushrooms", "frog_legs", "raven_feather"]
 	},
 	{
 		"name": "Wolfsbane's Bite",
 		"symptoms": ["Nausea", "Hallucinations (wolf)", "Paranoia"],
-		"cure": ["Bat wings", "Well water", "Tears of a widow", "Frozen flame"]
+		"cure": ["bat_wings", "well_water", "widows_tears", "frozen_flame"]
 	},
 	{
 		"name": "Banshee's Breath",
 		"symptoms": ["Paranoia", "Hallucinations (ghosts)", "Blindness", "Weakness"],
-		"cure": ["Frozen flame", "Gravemoss", "Mushrooms", "Well water"]
+		"cure": ["frozen_flame", "grave_moss", "mushrooms", "well_water"]
 	},
 	{
 		"name": "Foxglove Fever",
 		"symptoms": ["Overheating", "Freezing", "Weakness", "Fainting"],
-		"cure": ["Frozen flame", "Well water", "Spider silk", "Eye of newt"]
+		"cure": ["frozen_flame", "well_water", "spider_silk", "eye_of_newt"]
 	},
 	{
 		"name": "Hollow Heart",
 		"symptoms": ["Fainting", "Sloth", "Blindness", "Overheating"],
-		"cure": ["Tears of a widow", "Spider silk", "Crushed beetles", "Gravemoss"]
+		"cure": ["widows_tears", "spider_silk", "crushed_beetles", "grave_moss"]
 	},
 	{
 		"name": "Necrosis of the Night",
 		"symptoms": ["Vomiting", "Sloth", "Blindness", "Fainting"],
-		"cure": ["Gravemoss", "Bat wings", "Belladonna berries", "Crushed beetles"]
+		"cure": ["grave_moss", "bat_wings", "belladonna_berries", "crushed_beetles"]
 	}
 ]
 
@@ -155,7 +155,12 @@ func show_ailment(index):
 	ailment_title.text = ailment["name"]
 	cure_heading.text = "CURE INGREDIENTS"
 	cure_heading.show()
-	cure_text.text = "• " + "\n• ".join(ailment["cure"])
+
+	var cure_names = []
+	for ingredient_id in ailment["cure"]:
+		cure_names.append(IngredientDB.display_name(ingredient_id))
+
+	cure_text.text = "• " + "\n• ".join(cure_names)
 	cure_text.show()
 
 	var page = FIRST_AILMENT_PAGE + index * 2
