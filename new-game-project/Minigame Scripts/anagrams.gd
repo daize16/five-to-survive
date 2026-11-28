@@ -29,5 +29,5 @@ func _on_button_pressed() -> void:
 		submitMessage.text = "Correct!"
 	else:
 		submitMessage.text = "Wrong!"
-	await get_tree().create_timer(1.0).timeout
-	submitMessage.text = ""
+		await get_tree().create_timer(1.0).timeout
+		submitMessage.text = ""

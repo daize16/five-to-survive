@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://6ugonmgj7be3"]
+
+[ext_resource type="Script" uid="uid://bynphg6u647tc" path="res://Minigame Scripts/morsecodelooper.gd" id="1_0dws1"]
+[ext_resource type="Texture2D" uid="uid://gpl2pp26aban" path="res://Minigame Assets/morseBlinker.png" id="1_m8o3j"]
+
+[node name="Control" type="Control" unique_id=1322699571]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 480.0
+offset_bottom = 270.0
+script = ExtResource("1_0dws1")
+
+[node name="Background" type="ColorRect" parent="." unique_id=334473035]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -123.5
+offset_top = -85.0
+offset_right = 123.5
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Light" type="Node2D" parent="." unique_id=1550061425]
+position = Vector2(292, 88)
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Light" unique_id=2073477983]
+offset_left = -29.0
+offset_top = -24.0
+offset_right = 31.0
+offset_bottom = 36.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Light" unique_id=2136049097]
+position = Vector2(2, 6)
+texture = ExtResource("1_m8o3j")
+
+[node name="Translator1" type="Label" parent="." unique_id=1993270415]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 51.0
+offset_right = 189.0
+offset_bottom = 391.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 11
+text = "A: .-
+B: -...
+C: -.-.
+D: -..
+E: .
+F: ..-.
+G: --.
+H: ....
+I: ..
+"
+
+[node name="Translator2" type="Label" parent="." unique_id=1668631304]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 51.0
+offset_right = 263.0
+offset_bottom = 391.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 11
+text = "S: ...
+T: -
+U: ..-
+V: ...-
+W: .--
+X: -..-
+Y: -.--
+Z: --.."
+
+[node name="Translator3" type="Label" parent="." unique_id=1786989003]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 51.0
+offset_right = 224.0
+offset_bottom = 391.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 11
+text = "J: .---
+K: -.-
+L: .-..
+M: --
+N: -.
+O: ---
+P: .--.
+Q: --.-
+R: .-."
+
+[node name="InputText" type="LineEdit" parent="." unique_id=899364994]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 145.0
+offset_right = 340.0
+offset_bottom = 176.0
+
+[node name="Button" type="Button" parent="." unique_id=2054055133]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 182.0
+offset_right = 354.0
+offset_bottom = 207.0
+theme_override_font_sizes/font_size = 11
+text = "Submit
+"
+
+[node name="Label" type="Label" parent="." unique_id=1081987066]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 184.0
+offset_right = 277.0
+offset_bottom = 207.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
